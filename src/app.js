@@ -14,6 +14,7 @@ window.onload = function() {
   let action = ["ate", "broke", "punch"];
   let what = ["my phone", "my car", "the project"];
   let when = ["this morning", "last night", "when I was cooking"];
+  let className = ["alert-warning", "alert-success"]
 
   //create a variable that holds a random number between 0-2
   //Down below create a variable which makes random variable apply to the generator
@@ -41,13 +42,13 @@ window.onload = function() {
   let selectAction = selectExcuse(action);
   let selectWhat = selectExcuse(what);
   let selectWhen = selectExcuse(when);
+  let selectAlert = selectExcuse(className);
 
   //console log the variables sums to give the random generator result
-
-  console.log(selectWho + " " + selectAction + " " + selectWhat + " " + selectWhen)
 
   let htmlElement = document.querySelector(".excuse");
   // console.log(htmlElement);
 
+  htmlElement.classList.add(selectAlert);
   htmlElement.innerHTML = selectWho + " " + selectAction + " " + selectWhat + " " + selectWhen;
 };
